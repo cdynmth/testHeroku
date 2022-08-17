@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Iris Plant</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <h1>Machine Learning Model on Demand!</h1>
+    <div class ="content">
+        <form method ="POST">
+            <label>Sepal Length(cm)</label>
+            <br>
+            <input type ="text" name = "feature 1" id ="input">
+            <br>
+            <br>
+            <label>Sepal Width(cm)</label>
+            <br>
+            <input type ="text" name = "feature 2" id ="input">
+            <br>
+            <br>
+            <label>Petal Length(cm)</label>
+            <br>
+            <input type ="text" name = "feature 3" id ="input">
+            <br>
+            <br>
+            <label>Petal Width(cm)</label>
+            <br>
+            <input type ="text" name = "feature 4" id ="input">
+            <br>
+            <br>
+            <input type ="submit" value ="!Run Model!" id = "input">
+        </form>
+    </div>
+    <div class="content">
+        <a href="{{url_for('video')}}">Play Video</a>
+    </div>
+
+    
+<div class="content">
+    {% if pred %}
+        <h3> Theresult of your prediciton is</h3>
+        <h1>{{pred}}</h1>
+    {% endif %}
+        
+        {% if pred == 'setosa' %}
+            <img src="../static/images/{{pred}}.webp" id="img">
+        {% elif pred == 'versicolor' %}
+            <img src="../static/images/{{pred}}.jpg" id="img">
+        {% elif pred == 'virginica' %}
+            <img src="../static/images/{{pred}}.jpg" id="img">
+        {% endif %}
+<div>
+</body>
+</html>

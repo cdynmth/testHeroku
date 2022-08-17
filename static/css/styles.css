@@ -1,0 +1,12 @@
+h1{position:relative;top:-15px;color:aqua;font-size: 60px; font-family: Verdana, Geneva, Tahoma, sans-serif;text-align:  center;}
+
+h3{text-align: center;color: azure;}
+
+body{background-color: chocolate;}
+
+.content {margin: top 30px;text-align: center;} /* . calls classes*/
+
+#input{width: 20em; height: 1.2em;margin-top: 10px;} /* # calls id*/
+
+#img { width: 20em ;height: 25em;}
+
